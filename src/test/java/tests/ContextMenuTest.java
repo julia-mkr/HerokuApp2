@@ -13,8 +13,12 @@ public class ContextMenuTest extends BaseTest {
         contextMenuPage.openPage(CONTEXT_MENU_URL);
         contextMenuPage.doRightClickInsideDashedBox();
         Assert.assertEquals(contextMenuPage.getAlertMessageText(), EXPECTED_ALERT_MESSAGE_TEXT);
-        contextMenuPage.closeAlertWindow();
     }
 
-    // TODO think up how to assert that the popup isn't displayed
+    @Test
+    public void checkWhetherAlertWindowClosedTest() {
+        contextMenuPage.openPage(CONTEXT_MENU_URL);
+        contextMenuPage.doRightClickInsideDashedBox();
+        contextMenuPage.closeAlertWindow();
+    }
 }

@@ -11,6 +11,7 @@ public class DynamicControlsPage extends BasePage {
 
     private static final By CHECKBOX_INPUT = By.xpath("//*[@type='checkbox']");
     private static final By REMOVE_BUTTON = By.xpath("//*[contains (text(),'Remove')]//ancestor::*[@id='checkbox-example']/button");
+    private static final By MESSAGE_TEXT = By.id("message");
 
     private static final By INPUT_FIELD = By.xpath("//*[@type='text']");
     private static final By ENABLE_BUTTON = By.xpath("//*[@type='button']//ancestor::*[@id='input-example']//button");
@@ -21,14 +22,21 @@ public class DynamicControlsPage extends BasePage {
 
     public void clickOnRemoveButton() {
         driver.findElement(REMOVE_BUTTON).click();
+        waitForElementLocated(MESSAGE_TEXT, 5);
+    }
+
+    public boolean isCheckboxDisplayed() {
+        return driver.findElements(CHECKBOX_INPUT).size() < 1;
     }
 
     public void clickOnEnableButton() {
         driver.findElement(ENABLE_BUTTON).click();
+        waitForElementLocated(MESSAGE_TEXT, 5);
     }
 
     public boolean isInputFieldDisabled() {
-        return driver.findElement(INPUT_FIELD).isDisplayed();
+        System.out.println(driver.findElement(INPUT_FIELD).isEnabled());
+        return driver.findElement(INPUT_FIELD).isEnabled();
     }
 
     public boolean isInputFieldEnabled() {

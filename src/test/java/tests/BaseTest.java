@@ -16,6 +16,8 @@ public class BaseTest {
     FramesPage framesPage;
     DynamicControlsPage dynamicControlsPage;
 
+    public static final String INTERNET_HEROKUAPP_URL = "http://the-internet.herokuapp.com";
+
     @BeforeMethod
     public void initTest() {
         WebDriverManager.chromedriver().setup();

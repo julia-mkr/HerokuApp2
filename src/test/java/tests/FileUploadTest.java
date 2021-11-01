@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class FileUploadTest extends BaseTest {
 
-    private static final String FILE_UPLOAD_URL = "http://the-internet.herokuapp.com/upload";
+    private static final String FILE_UPLOAD_URL = INTERNET_HEROKUAPP_URL + "/upload";
     private static final String EXPECTED_FILE_NAME = "image.jpg";
 
     @Test

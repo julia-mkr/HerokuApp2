@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 public class DynamicControlsTest extends BaseTest {
 
-    private static final String DYNAMIC_CONTROLS_URL = "http://the-internet.herokuapp.com/dynamic_controls";
+    private static final String DYNAMIC_CONTROLS_URL = INTERNET_HEROKUAPP_URL + "/dynamic_controls";
 
     @Test
-    public void checkWhetherCheckboxIsDisappearedTest() {
+    public void checkWhetherCheckboxDisappearedTest() {
         dynamicControlsPage.openPage(DYNAMIC_CONTROLS_URL);
         dynamicControlsPage.clickOnCheckbox();
         dynamicControlsPage.clickOnRemoveButton();

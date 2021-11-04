@@ -12,7 +12,6 @@ public class DynamicControlsPage extends BasePage {
     private static final By CHECKBOX_INPUT = By.xpath("//*[@type='checkbox']");
     private static final By REMOVE_BUTTON = By.xpath("//*[contains (text(),'Remove')]//ancestor::*[@id='checkbox-example']/button");
     private static final By MESSAGE_TEXT = By.id("message");
-
     private static final By INPUT_FIELD = By.xpath("//*[@type='text']");
     private static final By ENABLE_BUTTON = By.xpath("//*[@type='button']//ancestor::*[@id='input-example']//button");
 

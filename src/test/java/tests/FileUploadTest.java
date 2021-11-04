@@ -11,7 +11,7 @@ public class FileUploadTest extends BaseTest {
     @Test
     public void uploadFileTest() {
         fileUploadPage.openPage(FILE_UPLOAD_URL);
-        fileUploadPage.chooseFile("C:\\Users\\Julie\\Desktop\\HerokuApp2\\image.jpg");
+        fileUploadPage.chooseFile("image.jpg");
         fileUploadPage.clickOnUploadButton();
         Assert.assertEquals(fileUploadPage.getNameOfUploadedFile(), EXPECTED_FILE_NAME);
     }

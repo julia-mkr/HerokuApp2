@@ -30,8 +30,8 @@ public class BaseTest {
         dynamicControlsPage = new DynamicControlsPage(driver);
     }
 
-    @AfterMethod
-    public void closeDriver() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void closeDriver() {
+//        driver.quit();
+//    }
 }

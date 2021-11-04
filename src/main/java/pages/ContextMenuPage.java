@@ -1,8 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ContextMenuPage extends BasePage {
 
@@ -23,5 +24,14 @@ public class ContextMenuPage extends BasePage {
 
     public void closeAlertWindow() {
         driver.switchTo().alert().accept();
+    }
+
+    public boolean isAlertWindowPresent() {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException Ex) {
+            return false;
+        }
     }
 }

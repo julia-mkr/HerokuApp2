@@ -20,6 +20,6 @@ public class ContextMenuTest extends BaseTest {
         contextMenuPage.openPage(CONTEXT_MENU_URL);
         contextMenuPage.doRightClickInsideDashedBox();
         contextMenuPage.closeAlertWindow();
-        // Многое перепробовала, но проверить, что alert закрыт, не получилось
+        Assert.assertFalse(contextMenuPage.isAlertWindowPresent());
     }
 }
